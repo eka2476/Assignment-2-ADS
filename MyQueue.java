@@ -1,17 +1,17 @@
 public class MyQueue<T> {
     private MyLinkedList<T> list = new MyLinkedList<>();
 
-    public void enqueue(T item) {
+    public void enqueue(T item) {    //queue...
         list.addLast(item);
     }
 
-    public T dequeue() {
+    public T dequeue() {        //first entry
         T item = list.getFirst();
         list.removeFirst();
         return item;
     }
 
-    public T peek() {
+    public T peek() {      //who first to exit
         return list.getFirst();
     }
 
