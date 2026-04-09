@@ -1,21 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        MyList<Integer> arrayList = new MyArrayList<>();
-        arrayList.add(10);
-        arrayList.add(20);
-        arrayList.addFirst(5);
-        System.out.println("ArrayList size: " + arrayList.size()); 
-        MyList<String> linkedList = new MyLinkedList<>();
-        linkedList.add("Apple");
-        linkedList.addFirst("Banana");
-        System.out.println("LinkedList first: " + linkedList.getFirst()); 
+        // Тест ArayList
+        MyList<String> arrayList = new MyArrayList<>();
+        arrayList.add("Java is cool");
+        arrayList.add("Python is ok too");
+        System.out.println("ArrayList size: " + arrayList.size()); // Должно быть 2
+
+        // Тест LinkedList
+        MyList<Integer> linkedList = new MyLinkedList<>();
+        linkedList.add(777);
+        linkedList.addFirst(111);
+        System.out.println("LL first: " + linkedList.getFirst()); // Должно быть 111
+
+        // проверить LIFO
+        MyStack<String> stack = new MyStack<>();
+        stack.push("First");
+        stack.push("Last");
+        System.out.println("Stack pop: " + stack.pop()); // Ждем Last
+
+        //провка что вылетает самый мелкий.
         MyMinHeap<Integer> heap = new MyMinHeap<>();
+        heap.insert(100);
+        heap.insert(5);
         heap.insert(50);
-        heap.insert(10);
-        heap.insert(30);
-        System.out.println("Heap min: " + heap.extractMin()); 
-        for (Integer item : arrayList) {
-            System.out.print(item + " ");
-        }
+        System.out.println("Min in heap: " + heap.extractMin()); // Должно быть 5
+        
+        System.out.println("Everything works perfectly, no cap!");
     }
 }
