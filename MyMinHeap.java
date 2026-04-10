@@ -11,7 +11,7 @@ public class MyMinHeap<T extends Comparable<T>> {        //чтобы можно
         
         T min = list.getFirst(); 
         
-        // Берем последний элемент и ставим его в начало, потом вниз
+        
         if (list.size() > 1) {
             list.set(0, list.getLast()); 
             list.removeLast(); // Удаляем дубликат с конца
@@ -22,7 +22,7 @@ public class MyMinHeap<T extends Comparable<T>> {        //чтобы можно
         return min;
     }
 
-    // Поднимаем элемент вверх
+    // Поднимаем вверх
     private void traverseUp(int index) {
         while (index > 0) {
             int parentIndex = (index - 1) / 2; 
