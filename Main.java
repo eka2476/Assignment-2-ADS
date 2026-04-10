@@ -25,6 +25,6 @@ public class Main {
         heap.insert(50);
         System.out.println("Min in heap: " + heap.extractMin()); // Должно быть 5
         
-        System.out.println("Everything works perfectly, no cap!");
+        System.out.println("vrode rabotaet");
     }
 }
